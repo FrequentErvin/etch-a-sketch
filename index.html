@@ -8,23 +8,37 @@
     <title>Etch-a-sketch!</title>
 </head>
 <body>
-    <header>
-       <h1>
-            Etch-a-sketch
-       </h1> 
-    </header>
-    <div class="container">
-        <div class="settings">
-
-        </div>
-        <div class="grid">
-
-        </div>
-    </div>
-    <footer>
-        <p>
-            Copright &copy; 2022 FrequentErvin <a href="https://github.com/FrequentErvin/etch-a-sketch" target=”_blank”></a>
-        </p>
-    </footer>
+        <header>
+            <h1>
+                 Etch-a-sketch
+            </h1> 
+         </header>
+         <div class="container">
+             <div class="box">
+                 <div class="settings">
+                     <div class="color-container">
+                        <input type="color" class="color-picker" value="#FF0000"/>              
+                     </div>
+     
+                     <button>Color mode</button>
+                     <button>Rainbow mode</button>
+                     <button>Eraser</button>
+                     <button class="clear">Clear</button>
+                     <p class="grid-dimension-prompt">16x16</p>
+                     <input type="range" min="1" max="100" value="50">
+                 </div>
+                 <div class="grid-container">
+                     <div class="grid">
+                     </div>
+                 </div>
+     
+             </div>
+         </div>
+         <footer>
+             <p>
+                 Copyright &copy; 2022 FrequentErvin <a href="https://github.com/FrequentErvin/etch-a-sketch" target=”_blank”></a>
+             </p>
+         </footer>
+         <script src="script.js"></script>
 </body>
 </html>
