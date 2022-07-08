@@ -78,7 +78,11 @@ button{
 button:hover{
     transform: scale(1.05);
 }
-button:focus{
+/* button:focus{
+    background-color:#333;
+    color: white;
+} */
+.pressed{
     background-color:#333;
     color: white;
 }
@@ -91,4 +95,7 @@ button:focus{
 }
 .grid-dimension-prompt{
     text-align: center;
+}
+.clear{
+
 }
