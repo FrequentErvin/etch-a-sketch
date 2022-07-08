@@ -71,8 +71,9 @@ button:hover{
     transform: scale(1.05);
 }
 
+
 .pressed{
-    background-color:#333;
+    background-color:#551A8B;
     color: white;
 }
 
@@ -92,4 +93,7 @@ button:hover{
 }
 .no-drag{
     user-select: none;
+}
+#slider{
+    accent-color: #551A8B;
 }
