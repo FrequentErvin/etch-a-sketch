@@ -14,21 +14,21 @@
             </h1> 
          </header>
          <div class="container">
-             <div class="box">
+             <div class="box" id="box">
                  <div class="settings">
                      <div class="color-container">
-                        <input type="color" class="color-picker" value="#DB84E1"/>              
+                        <input type="color" class="color-picker" value="#FDDBFF"/>              
                      </div>
      
-                     <button id="changeColor">Color mode</button>
+                     <button id="colorMode">Color mode</button>
                      <button id="rainbowMode">Rainbow mode</button>
                      <button id="eraser">Eraser</button>
-                     <button class="clear">Clear</button>
-                     <p class="grid-dimension-prompt">16x16</p>
-                     <input type="range" min="1" max="100" value="50">
+                     <button class="clear" onclick="resetGrid()">Clear</button>
+                     <p id="grid-dimension-prompt">16x16</p>
+                     <input type="range" min="1" max="128" value="16" id="slider">
                  </div>
                  <div class="grid-container">
-                     <div class="grid">
+                     <div class="grid" id="grid">
                      </div>
                  </div>
      
