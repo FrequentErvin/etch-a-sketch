@@ -1,6 +1,9 @@
+const defaultColor = "#FDDBFF";
+const defaultSize = 16;
 let buttons = Array.from(document.querySelectorAll("button"));
 let numOfPressed = 0;
 let body = document.querySelector("body");
+let currentColor = defaultColor;
 function resetGrid(){
     console.log("Clear");
 }
@@ -18,7 +21,6 @@ function changeColor(){
 }
 buttons.forEach(button => button.addEventListener("click",function(){
         if(!button.classList.contains("clear")){
-            //console.log(button.id);
             button.classList.toggle("pressed");
             if(button.classList.contains("pressed")){
                 switch(button.id){
@@ -41,25 +43,32 @@ buttons.forEach(button => button.addEventListener("click",function(){
 
         }
 }))
+let colorpicker = document.getElementById("")
 let slider = document.getElementById("slider");
 let currentValue = slider.value;
 let output = document.getElementById("grid-dimension-prompt");
 let grid = document.getElementById("grid");
-slider.oninput = function() {
-    grid.innerHTML = '';
-    output.innerHTML = `${this.value} x ${this.value}`;
-    currentValue = this.value;
-    let squareDimension = 512.0 / currentValue;
-    //console.log("heyy" + currentValue);
-    for(let i = 0; i < currentValue*currentValue; i++){
-        console.log(2293829);
-        grid.style.gridTemplateColumns = `repeat(${currentValue}, 1fr)`
-        grid.style.gridTemplateRows = `repeat(${currentValue}, 1fr)`
+function drawGrid(size){
+    let squareDimension = 512.0 / size;
+    for(let i = 0; i < size*size; i++){
+        console.log(22);
+        grid.style.gridTemplateColumns = `repeat(${size}, 1fr)`
+        grid.style.gridTemplateRows = `repeat(${size}, 1fr)`
         const cell = document.createElement("div");
         cell.addEventListener('mouseover', changeColor);
         cell.addEventListener('mousedown', changeColor);
-        cell.textContent = "aksdokqokwd";
+        cell.textContent = "";
         grid.appendChild(cell);
     }
 }
-
+slider.oninput = function() {
+    grid.innerHTML = '';
+    output.innerHTML = `${this.value} x ${this.value}`;
+    size = this.value;
+    drawGrid(size);
+}
+window.onload = () => {
+    drawGrid(defaultSize);
+    buttons[0].classList.add("pressed");
+    colorMode();
+}

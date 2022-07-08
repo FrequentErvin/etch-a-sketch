@@ -84,6 +84,7 @@ button:hover{
     /* background-color: #eae6eb; */
 }
 .grid{
+    display: grid;
     width: 512px;
     height: 512px;
     /* border-style: solid;

@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="pencil.png">
     <title>Etch-a-sketch!</title>
 </head>
 <body>
@@ -17,7 +19,7 @@
              <div class="box" id="box">
                  <div class="settings">
                      <div class="color-container">
-                        <input type="color" class="color-picker" value="#FDDBFF"/>              
+                        <input type="color" class="color-picker" value="#FDDBFF" id="picker"/>              
                      </div>
      
                      <button id="colorMode">Color mode</button>
@@ -25,7 +27,7 @@
                      <button id="eraser">Eraser</button>
                      <button class="clear" onclick="resetGrid()">Clear</button>
                      <p id="grid-dimension-prompt">16x16</p>
-                     <input type="range" min="1" max="128" value="16" id="slider">
+                     <input type="range" min="1" max="64" value="16" id="slider">
                  </div>
                  <div class="grid-container">
                      <div class="grid" id="grid">
@@ -36,7 +38,7 @@
          </div>
          <footer>
              <p>
-                 Copyright &copy; 2022 FrequentErvin <a href="https://github.com/FrequentErvin/etch-a-sketch" target=”_blank”></a>
+                 Copyright &copy; 2022 FrequentErvin <a href="https://github.com/FrequentErvin/etch-a-sketch" style="" target="_blank"><i style="font-size:24px" class="fa">&#xf09b;</i></a>
              </p>
          </footer>
          <script src="script.js"></script>
